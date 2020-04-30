@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Bookmark for YouTube™",
+    "version": "1.0",
+  
+    "description": "Saves the last timestamp when viewing a YouTube video and resumes it when loading that video again.",
+  
+    "icons": {
+      "48": "icons/icon48.png"
+    },
+     "permissions": ["storage"],
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/watch"],
+        "js": ["bookmark.js"]
+      }
+    ]
+  
+  }
