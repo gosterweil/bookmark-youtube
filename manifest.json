@@ -9,11 +9,14 @@
       "48": "icons/icon48.png"
     },
      "permissions": ["storage"],
+  
     "content_scripts": [
       {
-        "matches": ["*://*.youtube.com/watch"],
-        "js": ["bookmark.js"]
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["browser-polyfill.js",
+          "content.js"]
       }
-    ]
+    ],
+    "web_accessible_resources": ["injected.js"]
   
   }
